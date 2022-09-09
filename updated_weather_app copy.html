@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="updated_style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2b03dd30f8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+ 
+<div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Enter a city"
+                autofocus="on"
+              autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Enter"
+                id="search-button"
+                class="btn btn-light"
+              />
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Current Location"
+                  id="location-button"
+                  class="btn btn-light"
+                />
+            </div>
+          </div>
+        </form>
+<br/>
+
+
+    <div class="card location-date-time" style="width: 18rem">
+      <div class="card-body current">
+        <h5 id="searched-city"><strong>Dothan, Alabama</strong></h5>
+        <h5 class="card-subtitle mb-2 text-muted" id="date">07/31/2022</h5>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="card text-center daily-weather" style="width: 22rem">
+      <i class="fa-solid fa-sun daily-sun-pic"></i>
+      <div class="card-body">
+        
+        
+        <span class="temperature" id="current-temperature"><p class="card-text daily-temp"><strong>90</strong></p></span
+                ><div class="units">
+              
+               <a href="#" class="daily-temp" id="celsius-link"><strong>°C</strong></a> |
+                  <a href="#" class="daily-temp" id="fahrenheit-link"><strong>°F</strong></a>
+                  </p>
+                </div>
+              </div>
+        <h4>Precipitation: 15%</h4>
+        <h4>High: 90°F     Low: 71°F</h4>
+        <h4>Humidity: 54%</h4>
+        <h4 id="weather-description">Description</h4>
+                
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="container text-center weekly-weather">
+      <div class="row row-cols-5">
+        <div class="col">
+          <strong>Monday</strong>
+          <div>08/01/2022</div>
+          <div>
+            <i class="fa-solid fa-cloud-showers-heavy weekly-rain-pic"></i>
+          </div>
+          <div>Hi: 91°F Lo: 72°F</div>
+          <div>Precip: 100%</div>
+        </div>
+        <div class="col">
+          <strong>Tuesday</strong>
+          <div>08/02/2022</div>
+          <div>
+            <i class="fa-solid fa-sun weekly-sun-pic"></i>
+          </div>
+          <div>Hi: 92°F Lo: 73°F</div>
+          <div>Precip: 0%</div>
+        </div>
+        <div class="col">
+          <strong>Wednesday</strong>
+          <div>08/03/2022</div>
+          <div>
+            <i class="fa-solid fa-sun weekly-sun-pic"></i>
+          </div>
+          <div>Hi: 90°F Lo: 71°F</div>
+          <div>Precip: 15%</div>
+        </div>
+        <div class="col">
+          <strong>Thursday</strong>
+          <div>08/04/2022</div>
+          <div>
+            <i class="fa-solid fa-cloud-sun weekly-cloudy-pic"></i>
+          </div>
+          <div>Hi: 92°F Lo: 72°F</div>
+          <div>Precip: 24%</div>
+        </div>
+        <div class="col">
+          <strong>Friday</strong>
+          <div>08/05/2022</div>
+          <div>
+            <i class="fa-solid fa-cloud-sun weekly-cloudy-pic"></i>
+          </div>
+          <div>Hi: 94°F Lo: 73°F</div>
+          <div>Precip: 20%</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="update_index.js"></script>
+  </body>
+</html>

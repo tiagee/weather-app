@@ -1,0 +1,51 @@
+body {
+  font-family: "Source Serif Pro", serif;
+  background: #f0f0f0;
+}
+.search-form {
+  position: relative;
+  top: 30px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.daily-weather {
+  position: relative;
+  margin: 0 auto;
+}
+.daily-sun-pic {
+  font-size: 200px;
+  color: #f5b942;
+}
+.daily-cloudy-pic {
+  font-size: 200px;
+  color: #5a87e0;
+}
+.daily-rain-pic {
+  font-size: 200px;
+  color: #566275;
+}
+
+.weekly-weather {
+  display: table;
+  width: 100%;
+  font-size: 150%;
+}
+.daily-temp {
+  font-size: 300%;
+}
+.weekly-sun-pic {
+  color: #f5b942;
+  font-size: 50px;
+}
+.weekly-cloudy-pic {
+  color: #5a87e0;
+  font-size: 50px;
+}
+.weekly-rain-pic {
+  color: #566275;
+  font-size: 50px;
+}
+.location-button {
+  position: inline;
+}
