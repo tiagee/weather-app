@@ -10,7 +10,7 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
-    <title>Updated Weather App</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="updated_style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,63 +29,61 @@
 <div class="weather-app">
         <form class="search-form" id="search-form">
           <div class="row">
-            <div class="col-9">
+            <div class="col-8">
               <input
                 type="search"
-                placeholder="Enter a city"
+                placeholder="Enter a City"
                 autofocus="on"
               autocomplete="off"
                 id="city-input"
                 class="form-control shadow-sm"
               />
             </div>
-            <div class="col-3">
+            <div class="col-2">
               <input
                 type="submit"
                 value="Enter"
                 id="search-button"
-                class="btn btn-light"
+                class="btn btn-light submit-button"
               />
-              <div class="col-3">
+              <div class="col-2">
                 <input
                   type="submit"
                   value="Current Location"
                   id="location-button"
-                  class="btn btn-light"
+                  class="btn btn-light location-button"
                 />
             </div>
           </div>
         </form>
 <br/>
 
-
-    <div class="card location-date-time" style="width: 18rem">
-      <div class="card-body current">
-        <h5 id="searched-city"><strong>Dothan, Alabama</strong></h5>
-        <h5 class="card-subtitle mb-2 text-muted" id="date">07/31/2022</h5>
-      </div>
     </div>
     <br />
     <br />
     <br />
     <div class="card text-center daily-weather" style="width: 22rem">
+
       <i class="fa-solid fa-sun daily-sun-pic"></i>
       <div class="card-body">
+         <h5 id="searched-city"><strong>Dothan, Alabama</strong></h5>
+        <h5 class="card-subtitle mb-2 text-muted" id="date">07/31/2022</h5>
         
-        
-        <span class="temperature" id="current-temperature"><p class="card-text daily-temp"><strong>90</strong></p></span
-                ><div class="units">
+        <p class="card-text daily-temp"><span class="temperature" id="current-temperature"></span>°F</p>
+                <div class="units">
               
                <a href="#" class="daily-temp" id="celsius-link"><strong>°C</strong></a> |
                   <a href="#" class="daily-temp" id="fahrenheit-link"><strong>°F</strong></a>
                   </p>
                 </div>
               </div>
-        <h4>Precipitation: 15%</h4>
-        <h4>High: 90°F     Low: 71°F</h4>
-        <h4>Humidity: 54%</h4>
-        <h4 id="weather-description">Description</h4>
-                
+              <h4 id="weather-description">Description</h4>
+              <h4>Feels Like: <span id="feels-like"></span>°F</h4> 
+              <h4> Humidity: <span id="humidity"></span>%</h4>
+             
+            
+       
+          
       </div>
     </div>
 
@@ -142,6 +140,6 @@
       </div>
     </div>
 
-    <script src="update_index.js"></script>
+    <script src="updated_index.js"></script>
   </body>
 </html>
